@@ -5,6 +5,8 @@ extern crate dialoguer;
 
 use crate::git::*;
 use std::collections::HashSet;
+use std::env;
+use crate::command::*;
 
 use dialoguer::{theme::ColorfulTheme, MultiSelect};
 
@@ -50,6 +52,12 @@ fn ask_branches_to_delete(active_branch: &str) -> Vec<String> {
 }
 
 fn main() {
+    let path = match env::current_dir() {
+        Ok(b) => b,
+        Err(err) => panic!(err),
+    };
+    exec_command(format!("cd {}", path.into_os_string().into_string().unwrap()));
+
     let active_branch = get_active_branch();
     println!(
         "You are on branch \"{}\": can not deleted this branch",
