@@ -1,5 +1,5 @@
 [package]
-name = "githelper"
+name = "gbc"
 version = "0.1.0"
 authors = ["Antoine Prudhomme <antoineprudhomme5@gmail.com>"]
 edition = "2018"

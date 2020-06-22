@@ -41,6 +41,13 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a357d28ed41a50f9c765dbfe56cbc04a64e53e5fc58ba79fbc34c10ef3df831f"
 
 [[package]]
+name = "gbc"
+version = "0.1.0"
+dependencies = [
+ "dialoguer",
+]
+
+[[package]]
 name = "getrandom"
 version = "0.1.14"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -49,13 +56,6 @@ dependencies = [
  "cfg-if",
  "libc",
  "wasi",
-]
-
-[[package]]
-name = "githelper"
-version = "0.1.0"
-dependencies = [
- "dialoguer",
 ]
 
 [[package]]
